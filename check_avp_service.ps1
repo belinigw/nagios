@@ -24,7 +24,7 @@
 #>
 
 param(
-    [string]$Prefix = "AVP.",
+    [string]$Prefix = "Kaspersky.",
     [switch]$IncludeManualServices
 )
 
@@ -34,7 +34,7 @@ $exitcode = 3
 $message = ""
 
 # --- Obtém lista de serviços que correspondem ao prefixo ---
-$services = Get-CimInstance -ClassName Win32_Service | Where-Object { $_.Name -like "$Prefix*" }
+$services = Get-CimInstance -ClassName Win32_Service | Where-Object { $_.DisplayName -like "$Prefix*" }
 
 if (-not $services) {
     Write-Output "CRITICAL: Nenhum serviço encontrado com prefixo '$Prefix'"
