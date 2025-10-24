@@ -79,7 +79,7 @@ if ($stopped.Count -gt 0) {
     $message = "CRITICAL: servicos automaticos parados encontrados: " + ($stopped -join ", ")
     $exitcode = 2
 } else {
-    $message = "OK: servicos automaticos com prefixo '$Prefix' estão rodando (" + ($running -join ", ") + ")"
+    $message = "OK: servicos automaticos com prefixo '$Prefix' estao rodando (" + ($running -join ", ") + ")"
     $exitcode = 0
 }
 
