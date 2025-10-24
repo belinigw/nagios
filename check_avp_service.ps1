@@ -24,7 +24,7 @@
 #>
 
 param(
-    [string]$Prefix = "Kaspersky.",
+    [string]$Prefix = "Kaspersky",
     [switch]$IncludeManualServices
 )
 
